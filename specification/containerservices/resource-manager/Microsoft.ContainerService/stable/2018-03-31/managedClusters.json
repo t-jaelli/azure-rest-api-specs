@@ -832,8 +832,7 @@
         "maxPods": {
           "type": "integer",
           "format": "int32",
-          "description": "Maximum number of pods that can run on a node.",
-          "default": 30
+          "description": "Maximum number of pods that can run on a node."
         },
         "osType": {
           "$ref": "#/definitions/OSType",
@@ -1066,6 +1065,11 @@
             "$ref": "#/definitions/ManagedClusterAddonProfile"
           },
           "description": "Profile of managed cluster add-on."
+        },
+        "nodeResourceGroup": {
+          "readOnly": true,
+          "type": "string",
+          "description": "Name of the resource group containing agent pool nodes."
         },
         "enableRBAC": {
           "type": "boolean",
